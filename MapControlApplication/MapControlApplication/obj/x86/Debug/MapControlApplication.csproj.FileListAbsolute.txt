@@ -1,9 +1,0 @@
-E:\Cases\02327915\MapControlApplication\MapControlApplication\bin\Debug\MapControlApplication.exe
-E:\Cases\02327915\MapControlApplication\MapControlApplication\bin\Debug\MapControlApplication.pdb
-E:\Cases\02327915\MapControlApplication\MapControlApplication\obj\x86\Debug\MapControlApplication.MainForm.resources
-E:\Cases\02327915\MapControlApplication\MapControlApplication\obj\x86\Debug\MapControlApplication.Properties.Resources.resources
-E:\Cases\02327915\MapControlApplication\MapControlApplication\obj\x86\Debug\MapControlApplication.csproj.GenerateResource.cache
-E:\Cases\02327915\MapControlApplication\MapControlApplication\obj\x86\Debug\MapControlApplication.csproj.CoreCompileInputs.cache
-E:\Cases\02327915\MapControlApplication\MapControlApplication\obj\x86\Debug\MapControlApplication.exe
-E:\Cases\02327915\MapControlApplication\MapControlApplication\obj\x86\Debug\MapControlApplication.pdb
-E:\Cases\02327915\MapControlApplication\MapControlApplication\obj\x86\Debug\MapControlApplication.csprojAssemblyReference.cache
