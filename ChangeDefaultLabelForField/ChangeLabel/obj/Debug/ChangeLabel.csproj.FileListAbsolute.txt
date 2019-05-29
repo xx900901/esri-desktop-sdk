@@ -1,0 +1,6 @@
+E:\Cases\02308630\ChangeLabel\ChangeLabel\bin\Debug\ChangeLabel.dll
+E:\Cases\02308630\ChangeLabel\ChangeLabel\bin\Debug\ChangeLabel.pdb
+E:\Cases\02308630\ChangeLabel\ChangeLabel\obj\Debug\ChangeLabel.csprojAssemblyReference.cache
+E:\Cases\02308630\ChangeLabel\ChangeLabel\obj\Debug\ChangeLabel.csproj.CoreCompileInputs.cache
+E:\Cases\02308630\ChangeLabel\ChangeLabel\obj\Debug\ChangeLabel.dll
+E:\Cases\02308630\ChangeLabel\ChangeLabel\obj\Debug\ChangeLabel.pdb
