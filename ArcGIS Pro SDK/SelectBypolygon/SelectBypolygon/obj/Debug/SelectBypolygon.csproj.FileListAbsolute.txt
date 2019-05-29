@@ -1,0 +1,6 @@
+E:\Cases\02324298\SelectBypolygon\SelectBypolygon\bin\Debug\SelectBypolygon.dll
+E:\Cases\02324298\SelectBypolygon\SelectBypolygon\bin\Debug\SelectBypolygon.pdb
+E:\Cases\02324298\SelectBypolygon\SelectBypolygon\obj\Debug\SelectBypolygon.csprojAssemblyReference.cache
+E:\Cases\02324298\SelectBypolygon\SelectBypolygon\obj\Debug\SelectBypolygon.csproj.CoreCompileInputs.cache
+E:\Cases\02324298\SelectBypolygon\SelectBypolygon\obj\Debug\SelectBypolygon.dll
+E:\Cases\02324298\SelectBypolygon\SelectBypolygon\obj\Debug\SelectBypolygon.pdb
