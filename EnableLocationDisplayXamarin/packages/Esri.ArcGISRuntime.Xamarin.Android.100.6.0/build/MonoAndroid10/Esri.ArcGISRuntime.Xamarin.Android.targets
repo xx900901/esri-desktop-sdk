@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Target Name="ArcGISSupportedABICheck" BeforeTargets="Build;ReBuild" Condition="'$(AndroidSupportedAbis)' != '' And $(AndroidApplication)">
-    <Error Condition="$(AndroidSupportedAbis.Contains('x86_64'))" Text="The Esri.ArcGISRuntime.Xamarin.Android package does not currently support building for the x86_64 architecture. Please uncheck this option in Project Settings -&gt; Android Options -&gt; Advanced -&gt; Supported architectures." />
-
-  </Target>
-</Project>
