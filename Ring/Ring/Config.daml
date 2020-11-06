@@ -1,0 +1,37 @@
+﻿<ArcGIS defaultAssembly="Ring.dll" defaultNamespace="Ring" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///E:/ArcGISPro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{2cad4d54-51c4-4686-974f-0260b72cb92e}" version="1.0" desktopVersion="2.5.22081">
+    <Name>Ring</Name>
+    <Description>Ring description</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>xiao9284</Author>
+    <Company>Acme</Company>
+    <Date>6/11/2020 3:56:01 PM, 2020</Date>
+    <Subject>Framework</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+  <modules>
+    <insertModule id="Ring_Module" className="Module1" autoLoad="false" caption="Module1">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <!--<tab id="Ring_Tab1" caption="New Tab">
+          <group refID="Ring_Group1"/>
+        </tab>-->
+      </tabs>
+      <groups>
+        <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+        <group id="Ring_Group1" caption="Group 1" appearsOnAddInTab="true">
+          <!-- host controls within groups -->
+          <button refID="Ring_Button1" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <button id="Ring_Button1" caption="Button 1" className="Button1" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonBlue32.png">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </button>
+      </controls>
+    </insertModule>
+  </modules>
+</ArcGIS>
