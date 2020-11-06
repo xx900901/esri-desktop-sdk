@@ -1,0 +1,3 @@
+drawable-mdpi/esri.png;drawable-mdpi/esri.png
+drawable-xhdpi/esri.png;drawable-xhdpi/esri.png
+drawable-xxhdpi/esri.png;drawable-xxhdpi/esri.png
