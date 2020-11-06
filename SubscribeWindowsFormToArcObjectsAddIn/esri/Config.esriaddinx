@@ -1,0 +1,26 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>esri</Name>
+  <AddInID>{7a0f335a-89f7-4635-a991-4c50986028ab}</AddInID>
+  <Description>Type in a description for this Add-in.</Description>
+  <Version>1.0</Version>
+  <Image>Images\esri.png</Image>
+  <Author>xiao9284</Author>
+  <Company></Company>
+  <Date>2/26/2019</Date>
+  <Targets>
+    <Target name="Desktop" version="10.6" />
+  </Targets>
+  <AddIn language="CLR" library="esri.dll" namespace="esri">
+    <ArcMap>
+      <Commands>
+        <Tool id="esri_selectDockTool" class="selectDockTool" message="selectDockTool" caption="selectDockTool" tip="selectDockTool" category="Add-In Controls" image="Images\selectDockTool.png" />
+        <Button id="esri_ShowDock" class="ShowDock" message="ShowDock" caption="ShowDock" tip="ShowDock" category="Add-In Controls" image="Images\ShowDock.png" />
+      </Commands>
+      <DockableWindows>
+        <DockableWindow id="esri_DockableWindow1" class="DockableWindow1+AddinImpl" caption="My Dockable Window" image="Images\DockableWindow1.png">
+          <InitialPlacement height="300" width="300" state="pinned" position="left" />
+        </DockableWindow>
+      </DockableWindows>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>
