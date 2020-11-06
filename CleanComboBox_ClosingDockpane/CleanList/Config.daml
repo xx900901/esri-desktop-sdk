@@ -1,0 +1,46 @@
+﻿<ArcGIS defaultAssembly="CleanList.dll" defaultNamespace="CleanList" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///E:/ArcGISPro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{323fd002-307d-4edf-9110-eec1d050e032}" version="1.0" desktopVersion="2.3.15769">
+    <Name>CleanList</Name>
+    <Description>CleanList description</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>mody</Author>
+    <Company>Acme</Company>
+    <Date>4/28/2019 1:11:10 PM, 2019</Date>
+    <Subject>Framework</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+  <modules>
+    <insertModule id="CleanList_Module" className="Module1" autoLoad="false" caption="Module1">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <!--<tab id="CleanList_Tab1" caption="New Tab">
+          <group refID="CleanList_Group1"/>
+        </tab>-->
+      </tabs>
+      <groups>
+        <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+        <group id="CleanList_Group1" caption="Group 1" appearsOnAddInTab="true">
+          <!-- host controls within groups -->
+          <button refID="CleanList_Combo1_ShowButton" size="large" />
+          <comboBox refID="CleanList_ComboBoxxx" />
+        </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <button id="CleanList_Combo1_ShowButton" caption="Show Combo 1" className="Combo1_ShowButton" loadOnClick="true" smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonPurple16.png" largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericButtonPurple32.png">
+          <tooltip heading="Show Dockpane">Show Combo Dock<disabledText /></tooltip>
+        </button>
+        <comboBox id="CleanList_ComboBoxxx" caption="ComboBoxxx" className="ComboBoxxx" itemWidth="140" extendedCaption="Extended Caption" isEditable="false" isReadOnly="true" resizable="true">
+          <tooltip heading="Tooltip Heading">Tooltip text<disabledText /></tooltip>
+        </comboBox>
+      </controls>
+      <dockPanes>
+        <dockPane id="CleanList_Combo1" caption="Combo 1" className="Combo1ViewModel" dock="group" dockWith="esri_core_contentsDockPane">
+          <content className="Combo1View" />
+        </dockPane>
+      </dockPanes>
+    </insertModule>
+  </modules>
+</ArcGIS>
