@@ -1,0 +1,98 @@
+﻿<Window x:Class="ESG.Internal.ArcGISTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
+        xmlns:local="clr-namespace:ESG.Internal.ArcGISTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="525" Width="790" WindowState="Maximized">
+    <Window.Resources>
+        <local:MainWindowViewModel x:Key="MainWindowViewModel" />
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Button Grid.Row="0" Grid.Column="0" x:Name="button" Content="Add Data" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Margin="5,0,0,0" Click="button_Click"/>
+            <Button Grid.Row="0" Grid.Column="1" x:Name="frequencyButton" Content="Frequency Analysis" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Margin="5,0,0,0" Click="freqAnalysisButton_Click"/>
+            <Button Grid.Row="0" Grid.Column="2" x:Name="graphicsButton" Content="Test Graphics" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Margin="5,0,0,0" Click="graphicsButton_Click"/>
+            <Button Grid.Row="0" Grid.Column="3" x:Name="clearGraphicsButton" Content="Clear Graphics" HorizontalAlignment="Left" VerticalAlignment="Center" Width="150" Margin="5,0,0,0" Click="clearGraphicsButton_Click"/>
+        </Grid>
+        
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <TreeView Grid.Row="0" Grid.Column="0" x:Name="treeView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ItemsSource="{Binding LayerFileSources, Source={StaticResource MainWindowViewModel}}" SelectedItemChanged="treeView_SelectedItemChanged">
+                    <TreeView.ItemTemplate>
+                        <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                            <TextBlock Text="{Binding Name}" />
+                        </HierarchicalDataTemplate>
+                    </TreeView.ItemTemplate>
+                </TreeView>
+            </Grid>
+
+            <GridSplitter x:Name="gridSplitter1" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="5"/>
+
+            <TabControl Grid.Row="0" Grid.Column="2" x:Name="tabControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <TabItem Header="Map">
+                    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                        <esri:MapView Map="{Binding Map, Source={StaticResource MainWindowViewModel}}" Name="mapView"/>
+
+                        <Border Background="White" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="5" Padding="5" Width="150">
+                            <StackPanel>
+                                <TextBlock Text="Select basemap" Margin="0,0,0,2" TextWrapping="Wrap" />
+                                <ComboBox Name="basemapChooser" SelectionChanged="OnBasemapChooserSelectionChanged" ItemsSource="{Binding BasemapNames, Source={StaticResource MainWindowViewModel}}" SelectedIndex='0'/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Error Log">
+                    <Grid Background="#FFE5E5E5">
+                        <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <TextBox x:Name="loggingTextBlock" TextWrapping="Wrap" Text="{Binding LoggingText, Source={StaticResource MainWindowViewModel}}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                        </ScrollViewer>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+
+        <GridSplitter x:Name="gridSplitter2" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Height="5"/>
+
+        <DataGrid x:Name="dataGrid" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+    </Grid>
+</Window>
